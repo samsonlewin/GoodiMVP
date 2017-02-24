@@ -127,30 +127,40 @@ var defi15 ={
 	accepted : false,
 };
 
-$(".randomButton").on("click",function() {
-
 
 var challenges = [defi1, defi2, defi3, defi4, defi5, defi6, defi7, defi8, defi9, defi10, defi11, defi12, defi13, defi14, defi15];
+
+var myPoints = 0;
+var myCO2 = 0;
+
+$(".randomButton").on("click",function() {
+
 
 var randomChallenge = challenges[Math.floor(Math.random()*challenges.length)];
 console.log(randomChallenge);
 
-//you have variables saying : 
-// - the number of economy of C02 you made
-// - the number of points you wan
-var myPoints = 0;
-var myC02 = 0;
+$(".randomButton").html("Changer de Challenge >>")
 
 $(".challenge").html(randomChallenge.content);
+	
+$(".feedback").html(randomChallenge.explanation);
+
+$(".cpoints").html("Points :");
+$(".challengePoints").html(randomChallenge.points);
+
+$(".cCO2").html("CO2 :");
+$(".ChallengeCO2").html(randomChallenge.CO2);
+
+$(".clevel").html("Level :");
+$(".ChallengeLevel").html(randomChallenge.difficulty);
+
+
+$(".doButton").on("click", function(){
+	myPoints = myPoints + randomChallenge.points;
+	$(".myPoints").html(myPoints);
+	myCO2 = myCO2 + randomChallenge.CO2;
+	$(".myCO2").html(myCO2);
+
+})
 
 });
-
-// When you login to Goodi, you have a random challenge & buttons saying "do it", "other challenge"
-	
-	// if you click on "do it" 
-		// the amount of economy of C02 ads up
-		// the amount of points ads up
-		// the explanation text appears 
-
-	//ELSE if you click on other challenge
-		//another challenge appears randomly 
