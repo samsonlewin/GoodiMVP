@@ -1,0 +1,45 @@
+.header{
+	padding:10px; 
+	text-align: center;
+}
+
+.logo{
+	width: 50px;
+}
+
+.challenge{
+	background-color: #ffffff;
+	height: 100px;
+	margin : 100px;
+	border: 2px solid #666666;
+	text-align: center;
+	padding: 35px;
+	font-family: 'Anton', sans-serif;
+	color:#666666;
+	font-size: 20px;
+}
+
+.navbar{
+	background-color: #5dbc5e;
+}
+
+.randomButton{
+	margin-top: 50px;
+	background-color:#ffffff;
+	color :#666666 ;
+	border: solid 2px #666666;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Anton', sans-serif;
+}
+
+.randomButton:hover{
+	margin-top: 50px;
+	background-color:#666666;
+	color :#ffffff ;
+	border: solid 2px #ffffff;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
