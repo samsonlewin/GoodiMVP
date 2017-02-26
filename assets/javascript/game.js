@@ -145,21 +145,18 @@ $(".challenge").html(randomChallenge.content);
 	
 $(".feedback").html(randomChallenge.explanation);
 
-$(".cpoints").html("Points :");
-$(".challengePoints").html(randomChallenge.points);
+$(".challengePoints").html("Points : " + randomChallenge.points);
 
-$(".cCO2").html("CO2 :");
-$(".ChallengeCO2").html(randomChallenge.CO2);
+$(".ChallengeCO2").html("CO2 : " + randomChallenge.CO2 + " g");
 
-$(".clevel").html("Level :");
-$(".ChallengeLevel").html(randomChallenge.difficulty);
+$(".ChallengeLevel").html("Level : " + randomChallenge.difficulty);
 
 
 $(".doButton").on("click", function(){
 	myPoints = myPoints + randomChallenge.points;
-	$(".myPoints").html(myPoints);
+	$(".myPoints").html(myPoints + "points");
 	myCO2 = myCO2 + randomChallenge.CO2;
-	$(".myCO2").html(myCO2);
+	$(".myCO2").html(myCO2 + "g");
 
 })
 
