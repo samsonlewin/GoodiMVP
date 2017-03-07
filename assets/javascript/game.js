@@ -132,12 +132,13 @@ var challenges = [defi1, defi2, defi3, defi4, defi5, defi6, defi7, defi8, defi9,
 
 var myPoints = 0;
 var myCO2 = 0;
+var randomChallenge;
 
 $(".randomButton").on("click",function() {
 
 
-var randomChallenge = challenges[Math.floor(Math.random()*challenges.length)];
-console.log(randomChallenge);
+randomChallenge = challenges[Math.floor(Math.random()*challenges.length)];
+
 
 $(".randomButton").html("Changer de Challenge >>")
 
@@ -152,12 +153,15 @@ $(".ChallengeCO2").html("CO2 : " + randomChallenge.CO2 + " g");
 $(".ChallengeLevel").html("Level : " + randomChallenge.difficulty);
 
 
+});
+
 $(".doButton").on("click", function(){
+	
 	myPoints = myPoints + randomChallenge.points;
 	$(".myPoints").html(myPoints + "points");
 	myCO2 = myCO2 + randomChallenge.CO2;
 	$(".myCO2").html(myCO2 + "g");
-
 })
 
-});
+
+
